@@ -1,0 +1,27 @@
+
+server:
+  port: 8080
+spring:
+  application:
+    name: Trabajo1Implementacion
+  datasource:
+    url: jdbc:postgresql://localhost:5432/implementacion1
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: always
+      continue-on-error: false
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
